@@ -40,7 +40,7 @@
   }, { threshold: 0.5 });
   function stopVideos() {
     document.querySelectorAll('.video.playing').forEach(fig => {
-      fig.querySelector('iframe')?.remove();
+      fig.querySelector('iframe, video')?.remove();
       fig.classList.remove('playing');
     });
     const tr = document.getElementById('trailer');
@@ -87,12 +87,21 @@
     if (!id) { fig.classList.add('pending'); return; }
     fig.querySelector('.play').addEventListener('click', () => {
       const frame = fig.querySelector('.video-frame');
-      const ifr = document.createElement('iframe');
-      ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&hl=ko';
-      ifr.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-      ifr.allowFullscreen = true; ifr.title = fig.querySelector('figcaption b').textContent;
+      let el;
+      if (/\.(mp4|webm)$/i.test(id)) {           // 파일: 직접 재생 (누르기 전엔 내려받지 않음)
+        el = document.createElement('video');
+        el.src = id; el.controls = true; el.autoplay = true; el.playsInline = true; el.preload = 'none';
+        el.poster = fig.querySelector('img').src;
+        el.addEventListener('pause', () => el.blur()); el.addEventListener('ended', () => el.blur());
+      } else {                                    // 유튜브 ID
+        el = document.createElement('iframe');
+        el.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&hl=ko';
+        el.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        el.allowFullscreen = true;
+      }
+      el.title = fig.querySelector('figcaption b').textContent;
       stopVideos();                 // 한 번에 한 편만
-      frame.appendChild(ifr);       // 썸네일 위에 덮어씌움(facade는 그대로 둠)
+      frame.appendChild(el);        // 썸네일 위에 덮어씌움(facade는 그대로 둠)
       fig.classList.add('playing');
     });
   });
