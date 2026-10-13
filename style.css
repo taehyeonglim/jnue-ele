@@ -95,7 +95,8 @@ h1 {
   position: relative; aspect-ratio: 16/9; overflow: hidden;
   border: var(--line); border-radius: var(--r); box-shadow: var(--shadow); background: #000;
 }
-.video-frame img, .video-frame iframe { width: 100%; height: 100%; object-fit: cover; border: 0; }
+.video-frame img { width: 100%; height: 100%; object-fit: cover; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .play {
   position: absolute; inset: 0; margin: auto; width: 84px; height: 84px; border-radius: 50%;
   background: var(--pink); border: var(--line); box-shadow: 4px 4px 0 var(--ink); cursor: pointer;
@@ -255,8 +256,8 @@ body.presenter .hud-qr { width: 92px; height: 92px; background: #fff; border: va
 body.presenter .hud-qr img { width: 100%; height: 100%; }
 body.presenter.on-hero .hud-qr { display: none; }
 
-/* 4:3 프로젝터(1024×768)처럼 세로가 모자랄 때: 내용 폭 늘리고 여백 줄임 */
-@media (max-aspect-ratio: 4/3) and (min-width: 1000px) {
+/* 4:3 프로젝터(1024×768)나 탭바 있는 창(1024×640)처럼 세로가 모자랄 때: 여백·간격 줄임 */
+@media (max-height: 820px) and (min-width: 1000px) {
   body.presenter { --fs: 17px; }
   body.presenter .sec { padding-top: 20px; padding-bottom: 108px; }
   body.presenter .hud-qr { width: 80px; height: 80px; }
@@ -266,6 +267,15 @@ body.presenter.on-hero .hud-qr { display: none; }
   body.presenter .course summary { padding: 4px 8px; font-size: .95em; }
   body.presenter .foot { margin-top: 8px; }
   body.presenter .hero-sub { font-size: 1.8em; }
+}
+
+/* 탭바·독이 있는 1024×640 정도: 한 단계 더 줄임 */
+@media (max-height: 700px) and (min-width: 1000px) {
+  body.presenter { --fs: 15px; }
+  body.presenter .sec { padding-top: 14px; padding-bottom: 100px; }
+  body.presenter .sec-head { margin-bottom: 14px; }
+  body.presenter .sec-head h2 { font-size: 2rem; }
+  body.presenter .course summary { line-height: 1.2; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

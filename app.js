@@ -35,7 +35,15 @@
   }
   const io = new IntersectionObserver((ents) => {
     ents.forEach(e => { if (e.isIntersecting) { cur = secs.indexOf(e.target); syncHud(); } });
+    /* 영상 섹션을 벗어나면 재생 중인 유튜브를 내려 소리가 따라오지 않게 */
+    if (secs[cur].id !== 'videos') stopVideos();
   }, { threshold: 0.5 });
+  function stopVideos() {
+    document.querySelectorAll('.video.playing').forEach(fig => {
+      fig.querySelector('iframe')?.remove();
+      fig.classList.remove('playing');
+    });
+  }
   secs.forEach(s => io.observe(s));
   setPresenter(wantPresenter(), false);
 
@@ -47,7 +55,12 @@
   document.addEventListener('keydown', (e) => {
     if (e.target.matches('input, textarea')) return;
     if (e.key === 'p' || e.key === 'P') { setPresenter(!body.classList.contains('presenter'), true); return; }
+    if (e.key === 'f' || e.key === 'F') {
+      if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen?.();
+      return;
+    }
     if (!body.classList.contains('presenter')) return;
+    if (e.target.closest('summary, button, a')) return;   // 접기·버튼에 포커스가 있으면 그쪽 동작 우선
     const next = ['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'];
     const prev = ['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'];
     if (next.includes(e.key)) { e.preventDefault(); go(cur + 1); }
@@ -73,7 +86,8 @@
       ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1&hl=ko';
       ifr.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
       ifr.allowFullscreen = true; ifr.title = fig.querySelector('figcaption b').textContent;
-      frame.replaceChildren(ifr);
+      stopVideos();                 // 한 번에 한 편만
+      frame.appendChild(ifr);       // 썸네일 위에 덮어씌움(facade는 그대로 둠)
       fig.classList.add('playing');
     });
   });

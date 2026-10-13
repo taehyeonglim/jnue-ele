@@ -10,7 +10,7 @@ SECS = ["hero", "videos", "learn", "roadmap", "faculty", "life", "fit", "faq", "
 
 with sync_playwright() as p:
     b = p.chromium.launch()
-    for w, h in [(1024, 768), (1920, 1080)]:
+    for w, h in [(1024, 768), (1024, 640), (1920, 1080)]:   # 1024×640 = 탭바 있는 창을 4:3 프로젝터에 미러링
         pg = b.new_page(viewport={"width": w, "height": h})
         pg.goto(url); pg.wait_for_timeout(1500)
         pg.add_style_tag(content="html{scroll-behavior:auto!important}")
