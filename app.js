@@ -43,7 +43,12 @@
       fig.querySelector('iframe')?.remove();
       fig.classList.remove('playing');
     });
+    const tr = document.getElementById('trailer');
+    if (tr && !tr.paused) tr.pause();
   }
+  /* 트레일러 재생이 끝나거나 멈추면 포커스를 문서로 돌려 클리커가 바로 먹게 */
+  document.getElementById('trailer')?.addEventListener('ended', (e) => e.target.blur());
+  document.getElementById('trailer')?.addEventListener('pause', (e) => e.target.blur());
   secs.forEach(s => io.observe(s));
   setPresenter(wantPresenter(), false);
 
@@ -60,7 +65,7 @@
       return;
     }
     if (!body.classList.contains('presenter')) return;
-    if (e.target.closest('summary, button, a')) return;   // 접기·버튼에 포커스가 있으면 그쪽 동작 우선
+    if (e.target.closest('summary, button, a, video')) return;   // 접기·버튼·영상에 포커스가 있으면 그쪽 동작 우선
     const next = ['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'];
     const prev = ['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'];
     if (next.includes(e.key)) { e.preventDefault(); go(cur + 1); }
