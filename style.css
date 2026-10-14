@@ -294,3 +294,5 @@ body.presenter.on-hero .hud-qr { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* 긴 주소는 슬래시 뒤에서만 줄바꿈 */
+.url .nb { white-space: nowrap; }
