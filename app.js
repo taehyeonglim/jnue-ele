@@ -2,7 +2,7 @@
 (function () {
   const body = document.body;
   const secs = [...document.querySelectorAll('main > .sec')];
-  const KEY = 'jnue-ele.presenter';
+  const KEY = 'jnue-elementary.presenter';
 
   /* ── 발표 모드: 넓은 화면이면 자동, P 키 또는 버튼으로 전환 ── */
   function wantPresenter() {
