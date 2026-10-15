@@ -175,7 +175,8 @@ figcaption small { color: var(--muted); margin-left: .4em; }
 .career h3 { margin: 0 0 6px; font-family: var(--display); font-weight: 400; font-size: 1.4em; }
 .career p { margin: 0 0 10px; }
 .career ul { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 6px; }
-.career li b { display: inline-block; min-width: 3em; color: var(--pink); font-family: var(--hand); font-size: 1.1em; }
+.career li { display: grid; grid-template-columns: 3em 1fr; align-items: baseline; }
+.career li b { color: var(--pink); font-family: var(--hand); font-size: 1.1em; }
 
 /* ─── 8. faq ─── */
 .faq { display: grid; gap: 10px; }
@@ -298,3 +299,8 @@ body.presenter.on-hero .hud-qr { display: none; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 /* 긴 주소는 슬래시 뒤에서만 줄바꿈 */
 .url .nb { white-space: nowrap; }
+
+/* ─── 한글 줄바꿈: 낱말 단위로만, 제목은 줄 길이 고르게, 본문은 마지막 줄 외톨이 방지 ─── */
+body { word-break: keep-all; overflow-wrap: break-word; }
+h1, h2, h3, summary, figcaption, .sec-head p, .hero-sub { text-wrap: balance; }
+p, li, dd { text-wrap: pretty; }
