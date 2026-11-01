@@ -1,4 +1,4 @@
-/* 발표 모드 + 유튜브 facade */
+/* 발표 모드 + 오프닝 영상 + 영상 facade */
 (function () {
   const body = document.body;
   const secs = [...document.querySelectorAll('main > .sec')];
@@ -31,13 +31,24 @@
   function syncHud() {
     dots.querySelectorAll('a').forEach((a, i) => a.classList.toggle('on', i === cur));
     hudN.textContent = (cur + 1) + ' / ' + secs.length;
-    body.classList.toggle('on-hero', cur === 0);
+    body.classList.toggle('on-hero', secs[cur].id === 'hero');
+    body.classList.toggle('on-opening', secs[cur].id === 'opening');
   }
   const io = new IntersectionObserver((ents) => {
     ents.forEach(e => { if (e.isIntersecting) { cur = secs.indexOf(e.target); syncHud(); } });
-    /* 영상 섹션을 벗어나면 재생 중인 유튜브를 내려 소리가 따라오지 않게 */
+    /* 영상이 있는 화면을 벗어나면 멈춰 소리가 따라오지 않게 */
     if (secs[cur].id !== 'videos') stopVideos();
+    if (secs[cur].id !== 'opening' && opv && !opv.paused) opv.pause();
   }, { threshold: 0.5 });
+  /* 오프닝 영상: 화면 0. 클리커 첫 누름 = 재생, 재생 중 누름 = 다음 화면 */
+  const opv = document.getElementById('opening-video');
+  if (opv) {
+    const frame = opv.closest('.op-frame');
+    const btn = frame.querySelector('.op-play');
+    btn?.addEventListener('click', () => opv.play());
+    opv.addEventListener('play', () => frame.classList.add('playing'));
+    ['pause', 'ended'].forEach(ev => opv.addEventListener(ev, () => opv.blur()));
+  }
   function stopVideos() {
     document.querySelectorAll('.video.playing').forEach(fig => {
       fig.querySelector('iframe, video')?.remove();
@@ -68,11 +79,14 @@
     if (e.target.closest('summary, button, a, video')) return;   // 접기·버튼·영상에 포커스가 있으면 그쪽 동작 우선
     const next = ['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'];
     const prev = ['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'];
+    if (next.includes(e.key) && opv && secs[cur].id === 'opening' && opv.paused && !opv.ended) {
+      e.preventDefault(); opv.play(); return;                       // 오프닝: 첫 누름은 재생
+    }
     if (next.includes(e.key)) { e.preventDefault(); go(cur + 1); }
     else if (prev.includes(e.key)) { e.preventDefault(); go(cur - 1); }
     else if (e.key === 'Home') { e.preventDefault(); go(0); }
     else if (e.key === 'End') { e.preventDefault(); go(secs.length - 1); }
-    else if (/^[1-9]$/.test(e.key)) { go(Number(e.key) - 1); }
+    else if (/^[0-9]$/.test(e.key)) { go(Number(e.key)); }     // 0 = 오프닝, 1 = 시작 … 9
   });
   /* 유튜브 iframe이 포커스를 가져가면 클리커가 안 먹음 → 포커스를 문서로 되돌림 */
   window.addEventListener('blur', () => setTimeout(() => {

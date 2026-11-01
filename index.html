@@ -2,24 +2,24 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>전주교대 초등교육과 — 매력 초과</title>
-<meta name="description" content="전주교육대학교 초등교육과 소개. 교육의 본질을 탐구하고 실천하는 교사 — 심화과정, 교수진, 학과생활, FAQ.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>전주교대 초등교육과 — 교육을 두루, 따뜻하게</title>
+<meta name="description" content="교육의 본질을 탐구하고 실천하는 교사. 아홉 분야 교수진과 교육을 두루 배우는 전주교육대학교 초등교육과입니다.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="전주교대 초등교육과 — 매력 초과">
-<meta property="og:description" content="삐빅— 매력 한도를 초과하셨습니다. 교육의 본질을 탐구하고 실천하는 교사, 초등교육과입니다.">
+<meta property="og:title" content="전주교대 초등교육과 — 교육을 두루, 따뜻하게">
+<meta property="og:description" content="교육의 본질을 탐구하고 실천하는 교사. 아홉 분야 교수진과 교육을 두루 배우는 전주교육대학교 초등교육과입니다.">
 <meta property="og:image" content="https://taehyeonglim.github.io/jnue-elementary/img/og.jpg">
 <meta property="og:url" content="https://taehyeonglim.github.io/jnue-elementary/">
-<meta name="theme-color" content="#ffd6e7">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💗%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#FFF7E2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-<!-- ───── 설정: 영상 — 파일 경로(media/…mp4)면 직접 재생, 11자 ID면 유튜브. 빈 값이면 "준비 중" ───── -->
+<!-- ───── 설정: 영상 — 파일 경로(media/…mp4)면 직접 재생, 11자 ID면 유튜브 ───── -->
 <script>
 window.SITE = {
   url: "https://taehyeonglim.github.io/jnue-elementary/",
@@ -30,7 +30,7 @@ window.SITE = {
 };
 </script>
 
-<nav class="dots" aria-label="섹션 이동"></nav>
+<nav class="dots" aria-label="화면 이동"></nav>
 <div class="hud" aria-hidden="true">
   <span class="hud-n"></span>
   <a class="hud-qr" href="#hero" title="QR 다시 보기"><img src="img/qr.svg" alt=""></a>
@@ -38,20 +38,25 @@ window.SITE = {
 
 <main>
 
+<!-- 0. 오프닝 영상 -->
+<section id="opening" class="sec opening" data-title="오프닝">
+  <div class="op-frame">
+    <div class="op-soon" role="img" aria-label="오프닝 영상 준비 중">
+      <span class="op-sun"></span>
+      <p>전주교육대학교</p>
+      <b>초등교육과</b>
+      <small>오프닝 영상 준비 중</small>
+    </div>
+  </div>
+</section>
+
 <!-- 1. 첫 화면 -->
 <section id="hero" class="sec hero" data-title="시작">
-  <div class="hero-wrap">
-    <div class="hero-img">
-      <picture>
-        <source srcset="img/hero.webp" type="image/webp">
-        <img src="img/hero.jpg" alt="제 38대 초등교육과는 매력 초과 — 삐빅, 매력 한도를 초과하셨습니다" fetchpriority="high">
-      </picture>
-      <span class="credit">그림: 제38대 초등교육과 학생회</span>
-    </div>
-    <div class="hero-side">
-      <p class="eyebrow">전주교육대학교</p>
-      <h1>초등교육과</h1>
-      <p class="hero-sub">교육의 <em>본질</em>을<br>탐구하고 실천하는 교사</p>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">전주교육대학교 초등교육과</p>
+      <h1>교육을 <em>두루</em>,<br>따뜻하게.</h1>
+      <p class="slogan">교육의 본질을 탐구하고 실천하는 교사</p>
       <div class="qr-box">
         <img src="img/qr.svg" alt="QR 코드">
         <div>
@@ -59,44 +64,39 @@ window.SITE = {
           <span class="url">taehyeonglim.github.io/<wbr><span class="nb">jnue-elementary</span></span>
         </div>
       </div>
-      <p class="hint">↓ 아래로 넘기기 <span class="kbd-hint">(발표: → 또는 Space · F 전체화면)</span></p>
+    </div>
+    <div class="hero-chair">
+      <span class="sun" aria-hidden="true"></span>
+      <img src="img/chair-character.webp" alt="손을 흔들며 인사하는 학과장 임태형 캐릭터" width="720" height="900" fetchpriority="high">
+      <p class="bubble">한 명 한 명,<br>제가 챙기겠습니다.<small>학과장 임태형</small></p>
     </div>
   </div>
+  <ul class="leaves" aria-label="초등교사가 마주하는 다섯 가지 질문">
+    <li><small>교육철학 · 교육사회</small>왜 가르칠까</li>
+    <li><small>교육과정</small>무엇을 가르칠까</li>
+    <li><small>교육공학 · 교육평가</small>어떻게 가르치고 평가할까</li>
+    <li><small>교육심리 · 특수교육</small>아이는 어떻게 자랄까</li>
+    <li><small>상담심리 · 교육행정</small>어떻게 도울까</li>
+  </ul>
+  <p class="hint">↓ 아래로 넘기기 <span class="kbd-hint">(발표: → 또는 Space · F 전체화면)</span></p>
 </section>
 
-<!-- 2. 영상 -->
-<section id="videos" class="sec" data-title="영상">
+<!-- 2. 학과장이 드리는 말 -->
+<section id="letter" class="sec letter" data-title="학과장">
   <header class="sec-head">
-    <h2><span class="badge">01</span> 선배들이 만든 초등과</h2>
-    <p>23·24학번이 직접 찍은 두 편, 하이라이트 96초. 초등과가 아닌 사람은 누구?</p>
+    <h2><span class="badge">01</span> 학과장이 드리는 말</h2>
   </header>
-  <div class="vid-wrap">
-  <figure class="trailer">
-    <div class="video-frame">
-      <video id="trailer" controls playsinline preload="metadata" poster="media/trailer_poster.jpg">
-        <source src="media/trailer.mp4" type="video/mp4">
-      </video>
+  <div class="letter-grid">
+    <figure class="chair-photo">
+      <img src="img/chair-letter.webp" alt="학과장 임태형 교수 증명사진" width="354" height="472" loading="lazy">
+      <figcaption><b>임태형</b> 초등교육과 학과장 · 교육공학</figcaption>
+    </figure>
+    <div class="letter-card">
+      <p>초등교육과에 오면 '무엇을 가르칠까'와 함께 '왜 가르치는가'를 늘 묻게 됩니다. 교육철학부터 교육공학까지 아홉 분야의 교수 아홉 명이 수업과 아이와 학교를 각자의 눈으로 함께 들여다봅니다.</p>
+      <p>수업을 보는 눈, 모든 아이의 성장을 돕는 힘, 동료와 함께 학교를 바꾸는 리더십. 어떤 교과를 가르치든 교사라면 매일 쓰는 힘입니다. 자기 수업에 '왜'를 묻고 싶은 학생, 아이의 마음이 궁금한 학생이라면 초등교육과가 잘 맞을 겁니다.</p>
+      <p><mark>심화과정 선택을 두고 고민이 된다면 언제든 학과장인 저를 찾아 주세요.</mark> 초등교육과에서 기다리겠습니다.</p>
+      <p class="sign">학과장 임태형</p>
     </div>
-    <figcaption><b>초등과 하이라이트</b> <small>1분 36초</small></figcaption>
-  </figure>
-  <div class="videos">
-    <figure class="video" data-id="v23">
-      <div class="video-frame">
-        <img src="img/v23.jpg" alt="" loading="lazy">
-        <button class="play" type="button" aria-label="재생"><span></span></button>
-        <span class="soon">유튜브 준비 중</span>
-      </div>
-      <figcaption><b>초등과를 찾아라</b> <small>23학번 · 12분</small><br>단톡방 대화만 보고 초등과가 아닌 사람 찾기</figcaption>
-    </figure>
-    <figure class="video" data-id="v24">
-      <div class="video-frame">
-        <img src="img/v24.jpg" alt="" loading="lazy">
-        <button class="play" type="button" aria-label="재생"><span></span></button>
-        <span class="soon">유튜브 준비 중</span>
-      </div>
-      <figcaption><b>초등판독기</b> <small>24학번 · 12분</small><br>캠퍼스를 돌며 "당신… 초등교육과죠?"</figcaption>
-    </figure>
-  </div>
   </div>
 </section>
 
@@ -104,14 +104,14 @@ window.SITE = {
 <section id="learn" class="sec" data-title="공부">
   <header class="sec-head">
     <h2><span class="badge">02</span> 초등과는 뭘 공부해요?</h2>
-    <p><b>교사가 하는 일 전부</b>를 교육학의 눈으로 파고듭니다.<br>초등교사라면 누구나 마주치는 다섯 가지 질문.</p>
+    <p>초등교육과는 교육의 본질을 탐구하고 실천하는 교사를 기릅니다.<br>초등교사가 마주하는 다섯 가지 질문을 <b>아홉 분야 교수진</b>과 탐구합니다.</p>
   </header>
   <ol class="qs">
-    <li><span class="q-no">?</span><b>왜</b> 가르칠까<small>교육철학 · 교육사회</small></li>
-    <li><span class="q-no">?</span><b>무엇을</b> 가르칠까<small>교육과정</small></li>
-    <li><span class="q-no">?</span><b>어떻게</b> 가르치고 평가할까<small>교육공학 · 교육평가</small></li>
-    <li><span class="q-no">?</span>아이들은 <b>어떻게 자랄까</b><small>교육심리 · 특수교육</small></li>
-    <li><span class="q-no">?</span><b>어떻게 도울까</b><small>상담심리 · 교육행정</small></li>
+    <li><span class="q-no">1</span><b>왜</b> 가르칠까<small>교육철학 · 교육사회</small></li>
+    <li><span class="q-no">2</span><b>무엇을</b> 가르칠까<small>교육과정</small></li>
+    <li><span class="q-no">3</span><b>어떻게</b> 가르치고 평가할까<small>교육공학 · 교육평가</small></li>
+    <li><span class="q-no">4</span>아이는 <b>어떻게 자랄까</b><small>교육심리 · 특수교육</small></li>
+    <li><span class="q-no">5</span><b>어떻게 도울까</b><small>상담심리 · 교육행정</small></li>
   </ol>
   <p class="tags">
     <span>#무엇을가르칠까</span><span>#수업을보는눈</span><span>#모든아이의성장</span><span>#왜가르치는가</span><span>#교사리더십</span>
@@ -126,7 +126,7 @@ window.SITE = {
   </header>
   <div class="road">
     <div class="term"><h3>2-1</h3>
-      <details class="course req"><summary>데이터기반 수업분석과 AI피드백<em>내 수업을 실연하고, AI와 함께 분석</em></summary><p>내 수업을 직접 설계해 실연하고, 그 수업을 AI와 함께 분석해 고쳐 봅니다. 이 과정을 거치며 수업을 보는 눈을 기릅니다. 프로그래밍·통계 선수 지식은 필요 없습니다.</p></details>
+      <details class="course req"><summary>데이터기반 수업분석과 AI피드백<em>내 수업을 실연하고, AI와 함께 분석</em></summary><p>내 수업을 직접 설계해 실연하고, 수업 영상을 데이터와 AI 도구로 분석해 고쳐 봅니다.</p></details>
     </div>
     <div class="term"><h3>2-2</h3>
       <details class="course req"><summary>학부모교육<em>학부모와 함께 아이 키우기</em></summary><p>교사가 학부모와 어떻게 만나고 함께 아이를 키울지 배웁니다. 매주 반성적 저널을 쓰고 토론하며 학부모교육 프로그램을 직접 구상해 봅니다.</p></details>
@@ -138,7 +138,7 @@ window.SITE = {
     </div>
     <div class="term"><h3>3-2</h3>
       <details class="course req"><summary>현대사상과 교사<em>내 교육관 세우기</em></summary><p>20세기 교육사조와 포스트모더니즘 등 현대 사상이 '가르침'을 어떻게 바꿔 놓았는지 살핍니다. 영상과 토론으로 내 교육관을 세워 봅니다.</p></details>
-      <details class="course opt"><summary><i>택1</i>학교심리검사<em>아이를 숫자 너머로 읽기</em></summary><p>초등 현장에서 쓰는 심리검사의 기본 개념과 종류를 배우고, 직접 실시하고 해석해 봅니다.</p></details>
+      <details class="course opt"><summary><i>택1</i>학교심리검사<em>아이를 숫자 너머로 읽기</em></summary><p>초등 현장에서 쓰는 심리검사의 기본 개념과 종류를 배우고, 직접 실시하고 해석해 봅니다. 아이를 숫자 너머로 읽는 눈을 기릅니다.</p></details>
       <details class="course opt"><summary><i>택1</i>학교집단상담<em>학급의 힘으로 성장 돕기</em></summary><p>집단상담의 원리와 기술을 익히고, 학급 단위 집단 역동을 활용해 아이들의 성장을 돕는 프로그램을 설계합니다.</p></details>
     </div>
     <div class="term"><h3>4-1</h3>
@@ -150,7 +150,12 @@ window.SITE = {
       <details class="course opt"><summary><i>택1</i>학습동기와 자기조절학습<em>스스로 배우는 힘 기르기</em></summary><p>아이가 스스로 공부하게 만드는 힘인 학습동기와 자기조절학습을 배웁니다. 동기와 자기조절 능력을 진단하고 이를 키우는 수업·지도 전략을 설계해 봅니다.</p></details>
     </div>
   </div>
-  <p class="foot">+ 4학년: 지도교수와 함께 쓰는 졸업논문(개인 논문, P/F) · 2026학년도 신입생 적용 교육과정(2026. 9. 9. 확정) 기준</p>
+  <ol class="thesis" aria-label="4학년 졸업논문 일정">
+    <li><b>4-1</b> 주제 확정 · 지도교수 배정</li>
+    <li><b>4-2</b> 11월 중 논문 제출</li>
+    <li><b>심사</b> 합격/불합격(P/F)</li>
+  </ol>
+  <p class="foot">4학년 졸업논문은 지도교수와 함께 쓰는 개인 논문 · 2026학년도 신입생 적용 교육과정(2026. 9. 9. 확정) 기준</p>
 </section>
 
 <!-- 5. 교수진 -->
@@ -161,107 +166,192 @@ window.SITE = {
   </header>
   <!-- 순서는 학교 홈페이지 학과 소개(교수소개)와 동일 -->
   <ul class="prof">
-    <li><img src="img/prof/boo.webp" alt=""><div><b>부재율</b><span>교육평가</span><small>과정중심평가 · 교육측정</small></div></li>
-    <li><img src="img/prof/eun.webp" alt=""><div><b>은혁기</b><span>상담심리</span><small>학교상담 · 사회정서학습</small></div></li>
-    <li><img src="img/prof/chung.webp" alt=""><div><b>정윤경</b><span>교육철학</span><small>현대 교육사상 · 학생 주도성</small></div></li>
-    <li><img src="img/prof/choi.webp" alt=""><div><b>최병연</b><span>교육심리</span><small>창의성 · 영재교육</small></div></li>
-    <li><img src="img/prof/park.webp" alt=""><div><b>박종필</b><span>교육행정</span><small>학교 운영 · 교육정책</small></div></li>
-    <li><img src="img/prof/seo.webp" alt=""><div><b>서유진</b><span>특수교육</span><small>통합교육 · 학습장애 중재</small></div></li>
-    <li><img src="img/prof/lee-ds.webp" alt=""><div><b>이동성</b><span>교육사회</span><small>질적연구 · 교사의 삶</small></div></li>
-    <li><img src="img/prof/lee-rim.webp" alt=""><div><b>이림</b><span>교육과정</span><small>2022 개정 교육과정 · 통합 교육과정</small></div></li>
-    <li><img src="img/prof/lim.webp" alt=""><div><b>임태형</b><span>교육공학</span><small>생성형 AI · 수업영상 분석</small></div><i>학과장</i></li>
+    <li><img src="img/prof/boo.webp" alt="" loading="lazy"><div><b>부재율</b><span>교육평가</span><small>과정중심평가 · 교육측정</small></div></li>
+    <li><img src="img/prof/eun.webp" alt="" loading="lazy"><div><b>은혁기</b><span>상담심리</span><small>학교상담 · 사회정서학습</small></div></li>
+    <li><img src="img/prof/chung.webp" alt="" loading="lazy"><div><b>정윤경</b><span>교육철학</span><small>현대 교육사상 · 학생 주도성</small></div></li>
+    <li><img src="img/prof/choi.webp" alt="" loading="lazy"><div><b>최병연</b><span>교육심리</span><small>창의성 · 영재교육</small></div></li>
+    <li><img src="img/prof/park.webp" alt="" loading="lazy"><div><b>박종필</b><span>교육행정</span><small>학교 운영 · 교육정책</small></div></li>
+    <li><img src="img/prof/seo.webp" alt="" loading="lazy"><div><b>서유진</b><span>특수교육</span><small>통합교육 · 학습장애 중재</small></div></li>
+    <li><img src="img/prof/lee-ds.webp" alt="" loading="lazy"><div><b>이동성</b><span>교육사회</span><small>질적연구 · 교사의 삶</small></div></li>
+    <li><img src="img/prof/lee-rim.webp" alt="" loading="lazy"><div><b>이림</b><span>교육과정</span><small>2022 개정 교육과정 · 통합 교육과정</small></div></li>
+    <li><img src="img/prof/lim.webp" alt="" loading="lazy"><div><b>임태형</b><span>교육공학</span><small>생성형 AI · 수업영상 분석</small></div><i>학과장</i></li>
   </ul>
 </section>
 
-<!-- 6. 학과생활 -->
+<!-- 6. 선배 이야기 -->
+<section id="seniors" class="sec" data-title="선배">
+  <header class="sec-head">
+    <h2><span class="badge">05</span> 선배 이야기</h2>
+    <p>먼저 초등교육과를 고른 선배 세 사람이 들려 주는 이야기.</p>
+  </header>
+  <div class="seniors">
+    <article class="senior">
+      <header><img src="img/seniors/park-soyeon.webp" alt="박소연 사진" width="472" height="600" loading="lazy"><div><b>박소연</b><span>25학번 재학생</span></div></header>
+      <p class="pull">"초등교육이라는 숲 전체가 궁금하다면 초등교육과에서 만나요."</p>
+      <p>체육 같은 예체능 심화와 초등교육과 사이에서 오래 고민했습니다. 초등 교실에서는 한 과목을 깊이 아는 것보다 여러 과목을 하나로 엮어 가르치는 힘이 더 필요하다고 생각해 초등교육과를 골랐습니다. 교육과정 재구성과 학급 경영처럼 교실에서 바로 쓸 수 있는 공부가 많았습니다. 2학년 1학기에는 수업을 직접 설계하고 실연해 보았습니다.</p>
+    </article>
+    <article class="senior">
+      <header><img src="img/seniors/lee-yubin.webp" alt="이유빈 사진" width="472" height="600" loading="lazy"><div><b>이유빈</b><span>25학번 재학생</span></div></header>
+      <p class="pull">"초등교육과를 고른 가장 큰 이유는 사람이었습니다."</p>
+      <p>1학년 때부터 선배와 동기들이 먼저 다가와 챙겨 주었고, 교수님이 많아 졸업논문 지도도 든든했습니다. 뼛속까지 이과라 정답이 하나가 아닌 공부가 맞을지 걱정했지만, 못하는 게 아니라 안 해 본 것뿐이었습니다. 2학년 1학기에는 수업 지도안을 처음 써 보고 '이제 진짜 교대생이 됐다!'는 말이 절로 나왔습니다. 낯설어서 망설여진다면 한번 부딪혀 보세요.</p>
+    </article>
+    <article class="senior">
+      <header><img src="img/seniors/kim-dongho.webp" alt="김동호 사진" width="472" height="600" loading="lazy"><div><b>김동호</b><span>졸업생 · 동양초등학교 교사</span></div></header>
+      <p class="pull">"초등교육과는 '초등교육 자체'를 가장 깊이 있게 파고드는 곳입니다."</p>
+      <p>3학년 때 '개념기반 탐구수업'과 '과정중심평가' 강의에서 개념을 바탕으로 탐구 질문을 만들고 답을 찾도록 하는 지도안을 짜 보았는데, 학부생 때는 조금 엉뚱해 보였던 그 활동이 발령을 받아 현장에서 다시 보니 2022 개정 교육과정의 핵심이었습니다. 덕분에 올해 동료장학 수업도 그때 배운 내용을 토대로 구상해 선배 선생님들께 칭찬을 받았습니다. 초등교육과에 오시면 후회 없으실 겁니다.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 7. 선배들이 만든 영상 -->
+<section id="videos" class="sec" data-title="영상">
+  <header class="sec-head">
+    <h2><span class="badge">06</span> 선배들이 만든 초등과</h2>
+    <p>23·24학번이 직접 찍은 두 편. 초등과가 아닌 사람은 누구?</p>
+  </header>
+  <div class="vid-wrap">
+  <figure class="trailer" hidden>
+    <div class="video-frame">
+      <video id="trailer" controls playsinline preload="none" poster="media/trailer_poster.jpg">
+        <source src="media/trailer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <figcaption><b>초등과 하이라이트</b> <small>1분 36초</small></figcaption>
+  </figure>
+  <div class="videos">
+    <figure class="video" data-id="v23">
+      <div class="video-frame">
+        <img src="img/v23.jpg" alt="" loading="lazy">
+        <button class="play" type="button" aria-label="재생"><span></span></button>
+      </div>
+      <figcaption><b>초등과를 찾아라</b> <small>23학번 · 12분</small><br>단톡방 대화만 보고 초등과가 아닌 사람 찾기</figcaption>
+    </figure>
+    <figure class="video" data-id="v24">
+      <div class="video-frame">
+        <img src="img/v24.jpg" alt="" loading="lazy">
+        <button class="play" type="button" aria-label="재생"><span></span></button>
+      </div>
+      <figcaption><b>초등판독기</b> <small>24학번 · 12분</small><br>캠퍼스를 돌며 "당신… 초등교육과죠?"</figcaption>
+    </figure>
+  </div>
+  </div>
+</section>
+
+<!-- 8. 학과생활 -->
 <section id="life" class="sec" data-title="학과생활">
   <header class="sec-head">
-    <h2><span class="badge">05</span> 작은 학과의 1년</h2>
-    <p>교수 아홉 명이 학생 한 명 한 명을 가까이서 봅니다.</p>
+    <h2><span class="badge">07</span> 작은 학과의 1년</h2>
+    <p>아홉 분야의 교수가 학생 한 명 한 명을 가까이에서 돌보는 작은 학과입니다.</p>
   </header>
-  <ul class="life">
-    <li><span class="when">3월</span><b>학과 MT</b><p>신입생 + 재학생 1박 2일. 학과·선후배를 알아 가고, 지도교수와 개별 면담으로 대학 생활 설계.</p></li>
-    <li><span class="when">학기마다</span><b>개강·종강 모임</b><p>교수와 학생이 한자리에. 밥 먹고, 궁금한 거 묻고.</p></li>
-    <li><span class="when">2학년</span><b>학과 특성화 답사</b><p>교육현장과 역사를 하루에 돌아보는 답사. <span class="nb">2026 익산(시민역사기록관),</span> <span class="nb">2025 부안(내소사).</span></p></li>
-    <li><span class="when">4학년</span><b>졸업논문</b><p>한 해 동안 지도교수와 함께 내 논문 한 편을 완성해 제출. P/F로 심사.</p></li>
-  </ul>
+  <div class="life-grid">
+    <ul class="life">
+      <li><span class="when">3월</span><div><b>학과 MT</b><p>신입생과 재학생이 함께 1박 2일. 선후배를 알아 가고, 지도교수와 개별 면담으로 대학 생활을 설계합니다.</p></div></li>
+      <li><span class="when">학기마다</span><div><b>개강·종강 모임</b><p>교수와 학생이 한자리에 모입니다.</p></div></li>
+      <li><span class="when">가을</span><div><b>교내 체육대회</b><p>학과가 한 팀으로 나갑니다.</p></div></li>
+      <li><span class="when">2학년</span><div><b>학과 특성화 답사</b><p>교육현장과 역사를 함께 돌아보는 하루 답사. 2026년 익산시민역사기록관, 2025년 부안 내소사·새만금 메타버스 체험관.</p></div></li>
+      <li><span class="when">4학년</span><div><b>졸업논문</b><p>한 해 동안 지도교수와 함께 논문 한 편을 완성합니다.</p></div></li>
+    </ul>
+    <div class="photos">
+      <figure class="ph-mt"><img src="img/life/mt-2026.webp" alt="2026년 3월 학과 MT 단체 사진" width="1400" height="788" loading="lazy"><figcaption>2026 학과 MT</figcaption></figure>
+      <figure class="ph-iksan"><img src="img/life/iksan-2026.webp" alt="2026 학과 특성화 답사, 익산시민역사기록관 앞 단체 사진" width="1400" height="1050" loading="lazy"><figcaption>2026 답사 · 익산</figcaption></figure>
+      <figure class="ph-buan"><img src="img/life/buan-2025.webp" alt="2025 학과 특성화 답사, 부안 내소사 천왕문 앞 단체 사진" width="1015" height="729" loading="lazy"><figcaption>2025 답사 · 부안</figcaption></figure>
+    </div>
+  </div>
 </section>
 
-<!-- 7. 추천 + 진로 -->
-<section id="fit" class="sec" data-title="추천·진로">
+<!-- 9. 추천 + 역량 -->
+<section id="fit" class="sec" data-title="추천·역량">
   <header class="sec-head">
-    <h2><span class="badge">06</span> 이런 학생에게 추천</h2>
+    <h2><span class="badge">08</span> 이런 학생에게, 이런 힘을</h2>
   </header>
   <ul class="fit">
     <li>"왜 이렇게 가르치지?"라는 질문이 자꾸 떠오르는 학생</li>
     <li>과목 하나보다 <b>아이의 마음과 성장 과정</b>에 더 관심이 가는 학생</li>
     <li>학교와 교육 제도를 <b>바꾸는 일</b>에 참여하고 싶은 학생</li>
   </ul>
+  <div class="grow">
+    <div class="grow-col">
+      <h3>이런 마음이면 충분해요 <small>필요 역량</small></h3>
+      <ol>
+        <li>수업을 보면 '무엇을 가르쳤고 왜 잘됐을까' 따져 보는 눈</li>
+        <li>아이 한 명 한 명의 마음과 성장을 궁금해하는 관심</li>
+        <li>교육과 학교, 사회를 두고 '왜'를 묻고 토론하기를 즐기는 태도</li>
+      </ol>
+    </div>
+    <span class="grow-arrow" aria-hidden="true">→</span>
+    <div class="grow-col out">
+      <h3>졸업할 땐 이런 힘이 <small>길러지는 역량</small></h3>
+      <ol>
+        <li>교육과정·수업·평가를 하나로 설계하고, AI로 내 수업을 분석해 고치는 힘</li>
+        <li>모든 아이의 발달과 마음을 읽고, 심리검사·상담과 학습·정서행동 지원으로 성장을 돕는 힘</li>
+        <li>교육의 '왜'를 묻고, 학부모·동료와 함께 학교를 바꾸는 리더십</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 10. 진로 + FAQ -->
+<section id="faq" class="sec" data-title="진로·FAQ">
+  <header class="sec-head">
+    <h2><span class="badge">09</span> 졸업 후에는 · 자주 묻는 질문</h2>
+  </header>
   <div class="career">
-    <h3>졸업 후에는</h3>
-    <p>대부분 초등교사로 임용됩니다. 초등과의 공부는 <b>교실에 선 뒤에</b> 더 빛을 발합니다.</p>
+    <p>졸업생 대부분은 초등교사로 임용됩니다. 초등교육과의 공부는 <b>교실에 선 뒤에</b> 더 빛을 발합니다.</p>
     <ul>
       <li><b>수업</b> 교과서·평가 문항 개발, 수업 연구, 에듀테크·AI교육</li>
       <li><b>아이</b> 학교상담, 학습·정서행동 지원 → 교단 경력 뒤 교육대학원에서 전문상담교사 1급·특수학교(초등) 정교사 1급 자격</li>
       <li><b>학교</b> 장학사·교육연구사 같은 교육전문직, 교육정책 연구</li>
     </ul>
   </div>
-</section>
-
-<!-- 8. FAQ -->
-<section id="faq" class="sec" data-title="FAQ">
-  <header class="sec-head">
-    <h2><span class="badge">07</span> 자주 묻는 질문</h2>
-    <p>궁금한 질문은 <b>아래 버튼을 눌러보세요</b>. 답이 펼쳐집니다.</p>
-  </header>
+  <p class="faq-hint">궁금한 질문은 <b>눌러 보세요</b>. 답이 펼쳐집니다.</p>
   <div class="faq">
-    <details open>
+    <details>
       <summary>교과 심화가 아니라서 임용시험에 불리하지 않나요?</summary>
-      <p>아닙니다. 초등 임용시험은 어느 심화과정을 했든 <b>모두 같은 시험</b>을 보고, 범위도 초등 전 교과의 교육과정입니다. 오히려 1차 교육학 논술은 초등과에서 배우는 내용과 바로 이어지고, 2차 수업 실연은 2학년 때부터 해 보는 수업 설계·분석과 맞닿아 있습니다.</p>
+      <p>아닙니다. 초등 임용시험은 어느 심화과정을 했든 <b>모두 같은 시험</b>을 보고, 범위도 초등 전 교과의 교육과정입니다. 오히려 1차 시험의 교육학 논술은 초등교육과에서 배우는 내용과 바로 이어지고, 2차 시험의 수업 실연은 2학년 때부터 해 보는 수업 설계·분석과 맞닿아 있습니다.</p>
     </details>
     <details>
       <summary>졸업논문을 써야 한다던데, 부담되지 않나요?</summary>
-      <p>생각보다 작습니다. 4학년 1학기에 관심 있는 교육 문제로 주제를 정하고 지도교수가 배정되면, 한 해 동안 지도교수와 작은 연구 하나를 완성합니다. 2학기에 제출하면 P/F로 심사합니다. 점수 경쟁이 아니라 <b>내 질문 하나를 끝까지 따라가 보는 경험</b>입니다.</p>
+      <p>생각보다 작습니다. 4학년 1학기에 관심 있는 교육 문제로 주제를 정하고 학과에서 지도교수를 배정하면, 한 해 동안 지도교수와 함께 작은 연구 하나를 완성합니다. 2학기에 논문을 제출하면 합격/불합격으로 심사합니다. 점수 경쟁이 아니라, <b>내 질문 하나를 끝까지 따라가 보는 경험</b>에 가깝습니다.</p>
     </details>
     <details>
-      <summary>데이터·AI로 수업을 분석하는 과목, 컴퓨터를 잘해야 하나요?</summary>
-      <p>아니요. 프로그래밍이나 통계를 전제로 하지 않습니다. 내 수업을 스스로 설계해 실연해 보고, 그 수업을 AI와 함께 분석하며 무엇이 잘됐고 무엇을 고칠지 찾아봅니다. 이 과정을 거치며 <b>수업을 보는 눈</b>을 기릅니다. 도구 사용법은 수업 안에서 함께 배웁니다.</p>
+      <summary>데이터와 AI로 수업을 분석하는 과목, 컴퓨터나 통계를 잘해야 하나요?</summary>
+      <p>아니요. 2학년 1학기 '데이터기반 수업분석과 AI피드백'은 프로그래밍이나 통계를 전제로 하지 않습니다. 내 수업을 스스로 설계해 실연해 보고, 그 수업을 AI와 함께 분석하며 무엇이 잘됐고 무엇을 고칠지 찾아봅니다. 이 과정을 거치며 <b>수업을 보는 눈</b>을 기릅니다. 도구 사용법은 수업 안에서 함께 배웁니다.</p>
     </details>
   </div>
 </section>
 
-<!-- 9. 마무리 -->
+<!-- 11. 마무리 -->
 <section id="end" class="sec end" data-title="끝">
   <div class="end-grid">
-  <figure class="end-photo">
-    <img src="img/sports-2026.jpg" alt="2026 체육대회 날 밤 운동장 골대 앞에서 '매력 초과' 현수막을 들고 찍은 초등교육과 단체 사진" loading="lazy" width="1600" height="1067">
-    <figcaption>2026 체육대회, 우리 과 단체 사진</figcaption>
-  </figure>
-  <div class="end-wrap">
-    <p class="beep">삐빅—</p>
-    <h2>매력 한도를<br>초과하셨습니다.</h2>
-    <p class="end-sub">초등교육과에서 기다리겠습니다.</p>
-    <address>
-      <b>초등교육과 사무실</b>
-      <span>교육문화관 교수연구동 1층 106호</span>
-      <span><a href="tel:0632817181">063-281-7181</a> · <a href="mailto:ele@jnue.kr">ele@jnue.kr</a></span>
-      <span><a href="https://www.jnue.kr/portal/jnue/contents/contents_view.do?menuId=M0002000100100000" target="_blank" rel="noopener">학교 홈페이지 학과 소개 ↗</a></span>
-    </address>
-    <div class="qr-box small">
-      <img src="img/qr.svg" alt="QR 코드">
-      <span class="url">taehyeonglim.github.io/<wbr><span class="nb">jnue-elementary</span></span>
+    <figure class="end-photo">
+      <img src="img/life/sports-2026.webp" alt="2026 체육대회 날 밤 운동장 골대 앞에서 학과 현수막을 들고 찍은 초등교육과 단체 사진" loading="lazy" width="1400" height="934">
+      <figcaption>2026 체육대회, 우리 과 단체 사진</figcaption>
+    </figure>
+    <div class="end-card">
+      <span class="sun" aria-hidden="true"></span>
+      <p class="end-pre">심화과정, 고민되면 언제든 찾아오세요.</p>
+      <h2>초등교육과에서<br><em>기다리겠습니다.</em></h2>
+      <address>
+        <b>초등교육과 사무실</b>
+        <span>교육문화관 교수연구동 1층 106호</span>
+        <span><a href="tel:0632817181">063-281-7181</a> · <a href="mailto:ele@jnue.kr">ele@jnue.kr</a></span>
+        <span><a href="https://www.jnue.kr/portal/jnue/contents/contents_view.do?menuId=M0002000100100000" target="_blank" rel="noopener">학교 홈페이지 학과 소개 ↗</a></span>
+      </address>
+      <div class="qr-box small">
+        <img src="img/qr.svg" alt="QR 코드">
+        <span class="url">taehyeonglim.github.io/<wbr><span class="nb">jnue-elementary</span></span>
+      </div>
     </div>
-  </div>
   </div>
 </section>
 
 </main>
 
 <footer class="site-foot">
-  <span>전주교육대학교 초등교육과 · 그림 ⓒ 제38대 초등교육과 학생회 · 영상 ⓒ 23·24학번</span>
+  <span>전주교육대학교 초등교육과 · 영상 ⓒ 23·24학번</span>
   <button type="button" class="pmode" title="발표 모드 전환 (P)">발표 모드</button>
 </footer>
 
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
