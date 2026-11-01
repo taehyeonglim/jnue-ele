@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,8 +31,8 @@ window.SITE = {
 </script>
 
 <nav class="dots" aria-label="화면 이동"></nav>
-<div class="hud" aria-hidden="true">
-  <span class="hud-n"></span>
+<div class="hud">
+  <span class="hud-n" aria-hidden="true"></span>
   <a class="hud-qr" href="#hero" title="QR 다시 보기"><img src="img/qr.svg" alt=""></a>
 </div>
 
@@ -41,7 +41,7 @@ window.SITE = {
 <!-- 0. 오프닝 영상 -->
 <section id="opening" class="sec opening" data-title="오프닝">
   <div class="op-frame">
-    <video id="opening-video" playsinline preload="none" poster="media/opening_poster.jpg" aria-label="초등교육과 오프닝 영상 44초">
+    <video id="opening-video" playsinline preload="none" poster="media/opening_poster.jpg" aria-label="초등교육과 오프닝 영상 48초">
       <source src="media/opening.mp4" type="video/mp4">
     </video>
     <button class="op-play" type="button" aria-label="오프닝 영상 재생"><span></span></button>
@@ -124,28 +124,28 @@ window.SITE = {
   </header>
   <div class="road">
     <div class="term"><h3>2-1</h3>
-      <details class="course req"><summary>데이터기반 수업분석과 AI피드백<em>내 수업을 실연하고, AI와 함께 분석</em></summary><p>내 수업을 직접 설계해 실연하고, 수업 영상을 데이터와 AI 도구로 분석해 고쳐 봅니다.</p></details>
+      <details name="course" class="course req"><summary>데이터기반 수업분석과 AI피드백<em>내 수업을 실연하고, AI와 함께 분석</em></summary><p>내 수업을 직접 설계해 실연하고, 수업 영상을 데이터와 AI 도구로 분석해 고쳐 봅니다.</p></details>
     </div>
     <div class="term"><h3>2-2</h3>
-      <details class="course req"><summary>학부모교육<em>학부모와 함께 아이 키우기</em></summary><p>교사가 학부모와 어떻게 만나고 함께 아이를 키울지 배웁니다. 매주 반성적 저널을 쓰고 토론하며 학부모교육 프로그램을 직접 구상해 봅니다.</p></details>
+      <details name="course" class="course req"><summary>학부모교육<em>학부모와 함께 아이 키우기</em></summary><p>교사가 학부모와 어떻게 만나고 함께 아이를 키울지 배웁니다. 매주 반성적 저널을 쓰고 토론하며 학부모교육 프로그램을 직접 구상해 봅니다.</p></details>
     </div>
     <div class="term"><h3>3-1</h3>
-      <details class="course req"><summary>교사리더십<em>교실과 학교를 바꾸는 교사</em></summary><p>리더십 이론을 학교 현장에 적용해 봅니다. 교실과 학교의 변화를 이끄는 교사는 어떤 사람인지 토론과 협동학습으로 탐구합니다.</p></details>
-      <details class="course opt"><summary><i>택1</i>학습 장애 및 부진학생 지도<em>배움이 어려운 아이 돕기</em></summary><p>읽기·쓰기·수학에서 어려움을 겪는 학습장애·학습부진 학생과 경계선 지능 학생의 특성을 이해하고, 이들을 위한 수업 전략과 정서·사회성 지원 방법을 배웁니다.</p></details>
-      <details class="course opt"><summary><i>택1</i>정서·행동 장애 및 문제 학생 지도<em>마음과 행동을 함께 돕기</em></summary><p>정서·행동장애 학생과 정서·행동 문제를 보이는 학생의 특성을 이해하고 정서 지원과 행동 관리 방법을 배웁니다. 가정·학급·학교가 함께하는 지원 계획을 세워 봅니다.</p></details>
+      <details name="course" class="course req"><summary>교사리더십<em>교실과 학교를 바꾸는 교사</em></summary><p>리더십 이론을 학교 현장에 적용해 봅니다. 교실과 학교의 변화를 이끄는 교사는 어떤 사람인지 토론과 협동학습으로 탐구합니다.</p></details>
+      <details name="course" class="course opt"><summary><i>택1</i>학습 장애 및 부진학생 지도<em>배움이 어려운 아이 돕기</em></summary><p>읽기·쓰기·수학에서 어려움을 겪는 학습장애·학습부진 학생과 경계선 지능 학생의 특성을 이해하고, 이들을 위한 수업 전략과 정서·사회성 지원 방법을 배웁니다.</p></details>
+      <details name="course" class="course opt"><summary><i>택1</i>정서·행동 장애 및 문제 학생 지도<em>마음과 행동을 함께 돕기</em></summary><p>정서·행동장애 학생과 정서·행동 문제를 보이는 학생의 특성을 이해하고 정서 지원과 행동 관리 방법을 배웁니다. 가정·학급·학교가 함께하는 지원 계획을 세워 봅니다.</p></details>
     </div>
     <div class="term"><h3>3-2</h3>
-      <details class="course req"><summary>현대사상과 교사<em>내 교육관 세우기</em></summary><p>20세기 교육사조와 포스트모더니즘 등 현대 사상이 '가르침'을 어떻게 바꿔 놓았는지 살핍니다. 영상과 토론으로 내 교육관을 세워 봅니다.</p></details>
-      <details class="course opt"><summary><i>택1</i>학교심리검사<em>아이를 숫자 너머로 읽기</em></summary><p>초등 현장에서 쓰는 심리검사의 기본 개념과 종류를 배우고, 직접 실시하고 해석해 봅니다. 아이를 숫자 너머로 읽는 눈을 기릅니다.</p></details>
-      <details class="course opt"><summary><i>택1</i>학교집단상담<em>학급의 힘으로 성장 돕기</em></summary><p>집단상담의 원리와 기술을 익히고, 학급 단위 집단 역동을 활용해 아이들의 성장을 돕는 프로그램을 설계합니다.</p></details>
+      <details name="course" class="course req"><summary>현대사상과 교사<em>내 교육관 세우기</em></summary><p>20세기 교육사조와 포스트모더니즘 등 현대 사상이 '가르침'을 어떻게 바꿔 놓았는지 살핍니다. 영상과 토론으로 내 교육관을 세워 봅니다.</p></details>
+      <details name="course" class="course opt"><summary><i>택1</i>학교심리검사<em>아이를 숫자 너머로 읽기</em></summary><p>초등 현장에서 쓰는 심리검사의 기본 개념과 종류를 배우고, 직접 실시하고 해석해 봅니다. 아이를 숫자 너머로 읽는 눈을 기릅니다.</p></details>
+      <details name="course" class="course opt"><summary><i>택1</i>학교집단상담<em>학급의 힘으로 성장 돕기</em></summary><p>집단상담의 원리와 기술을 익히고, 학급 단위 집단 역동을 활용해 아이들의 성장을 돕는 프로그램을 설계합니다.</p></details>
     </div>
     <div class="term"><h3>4-1</h3>
-      <details class="course req"><summary>교육과정-수업-평가 일체화<em>성취기준에서 평가까지 한 줄로</em></summary><p>성취기준에서 출발해 수업을 설계하고 과정중심평가까지 한 줄로 잇는 연습을 합니다. 임용 후 바로 쓰는 수업 설계의 핵심 기술입니다.</p></details>
+      <details name="course" class="course req"><summary>교육과정-수업-평가 일체화<em>성취기준에서 평가까지 한 줄로</em></summary><p>성취기준에서 출발해 수업을 설계하고 과정중심평가까지 한 줄로 잇는 연습을 합니다. 임용 후 바로 쓰는 수업 설계의 핵심 기술입니다.</p></details>
     </div>
     <div class="term"><h3>4-2</h3>
-      <details class="course req"><summary>교육개혁론<em>교육개혁의 주체가 되기</em></summary><p>지금 우리나라와 세계의 교육개혁이 어디로 가는지 읽고, 교사가 개혁의 주체로 참여하려면 무엇이 필요한지 토론합니다.</p></details>
-      <details class="course opt"><summary><i>택1</i>영재성과 재능개발<em>아이의 재능 키우기</em></summary><p>영재성 이론과 영재학생의 특성, 판별 방법을 배우고 심화학습·속진·차별화 수업처럼 아이의 재능을 키우는 수업 방법을 익힙니다.</p></details>
-      <details class="course opt"><summary><i>택1</i>학습동기와 자기조절학습<em>스스로 배우는 힘 기르기</em></summary><p>아이가 스스로 공부하게 만드는 힘인 학습동기와 자기조절학습을 배웁니다. 동기와 자기조절 능력을 진단하고 이를 키우는 수업·지도 전략을 설계해 봅니다.</p></details>
+      <details name="course" class="course req"><summary>교육개혁론<em>교육개혁의 주체가 되기</em></summary><p>지금 우리나라와 세계의 교육개혁이 어디로 가는지 읽고, 교사가 개혁의 주체로 참여하려면 무엇이 필요한지 토론합니다.</p></details>
+      <details name="course" class="course opt"><summary><i>택1</i>영재성과 재능개발<em>아이의 재능 키우기</em></summary><p>영재성 이론과 영재학생의 특성, 판별 방법을 배우고 심화학습·속진·차별화 수업처럼 아이의 재능을 키우는 수업 방법을 익힙니다.</p></details>
+      <details name="course" class="course opt"><summary><i>택1</i>학습동기와 자기조절학습<em>스스로 배우는 힘 기르기</em></summary><p>아이가 스스로 공부하게 만드는 힘인 학습동기와 자기조절학습을 배웁니다. 동기와 자기조절 능력을 진단하고 이를 키우는 수업·지도 전략을 설계해 봅니다.</p></details>
     </div>
   </div>
   <ol class="thesis" aria-label="4학년 졸업논문 일정">
@@ -250,9 +250,8 @@ window.SITE = {
       <li><span class="when">4학년</span><div><b>졸업논문</b><p>한 해 동안 지도교수와 함께 논문 한 편을 완성합니다.</p></div></li>
     </ul>
     <div class="photos">
-      <figure class="ph-mt"><img src="img/life/mt-2026.webp" alt="2026년 3월 학과 MT 단체 사진" width="1400" height="788" loading="lazy"><figcaption>2026 학과 MT</figcaption></figure>
-      <figure class="ph-iksan"><img src="img/life/iksan-2026.webp" alt="2026 학과 특성화 답사, 익산시민역사기록관 앞 단체 사진" width="1400" height="1050" loading="lazy"><figcaption>2026 답사 · 익산</figcaption></figure>
-      <figure class="ph-buan"><img src="img/life/buan-2025.webp" alt="2025 학과 특성화 답사, 부안 내소사 천왕문 앞 단체 사진" width="1015" height="729" loading="lazy"><figcaption>2025 답사 · 부안</figcaption></figure>
+      <figure><img src="img/life/iksan-2026.webp" alt="2026 학과 특성화 답사, 익산시민역사기록관 앞 단체 사진" width="1400" height="1050" loading="lazy"><figcaption>2026 답사 · 익산시민역사기록관</figcaption></figure>
+      <figure><img src="img/life/buan-2025.webp" alt="2025 학과 특성화 답사, 부안 내소사 천왕문 앞 단체 사진" width="1015" height="729" loading="lazy"><figcaption>2025 답사 · 부안 내소사</figcaption></figure>
     </div>
   </div>
 </section>
@@ -350,6 +349,6 @@ window.SITE = {
   <button type="button" class="pmode" title="발표 모드 전환 (P)">발표 모드</button>
 </footer>
 
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

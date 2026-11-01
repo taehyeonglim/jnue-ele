@@ -2,3 +2,4 @@
 __pycache__/
 .superpowers/
 tools/check.py
+tools/check_keys.py
