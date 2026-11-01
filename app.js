@@ -38,16 +38,17 @@
     ents.forEach(e => { if (e.isIntersecting) { cur = secs.indexOf(e.target); syncHud(); } });
     /* 영상이 있는 화면을 벗어나면 멈춰 소리가 따라오지 않게 */
     if (secs[cur].id !== 'videos') stopVideos();
-    if (secs[cur].id !== 'opening' && opv && !opv.paused) opv.pause();
+    if (secs[cur].id !== 'opening' && opv && opv.currentTime > 0) { opv.pause(); opv.currentTime = 0; }   // 다시 오면 처음부터
   }, { threshold: 0.5 });
   /* 오프닝 영상: 화면 0. 클리커 첫 누름 = 재생, 재생 중 누름 = 다음 화면 */
   const opv = document.getElementById('opening-video');
   if (opv) {
     const frame = opv.closest('.op-frame');
     const btn = frame.querySelector('.op-play');
-    btn?.addEventListener('click', () => opv.play());
+    btn?.addEventListener('click', () => { opv.play(); btn.blur(); });
+    opv.addEventListener('click', () => (opv.paused ? opv.play() : opv.pause()));
     opv.addEventListener('play', () => frame.classList.add('playing'));
-    ['pause', 'ended'].forEach(ev => opv.addEventListener(ev, () => opv.blur()));
+    ['pause', 'ended'].forEach(ev => opv.addEventListener(ev, () => { frame.classList.remove('playing'); opv.blur(); }));
   }
   function stopVideos() {
     document.querySelectorAll('.video.playing').forEach(fig => {
@@ -79,7 +80,7 @@
     if (e.target.closest('summary, button, a, video')) return;   // 접기·버튼·영상에 포커스가 있으면 그쪽 동작 우선
     const next = ['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'];
     const prev = ['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'];
-    if (next.includes(e.key) && opv && secs[cur].id === 'opening' && opv.paused && !opv.ended) {
+    if (next.includes(e.key) && opv && secs[cur].id === 'opening' && opv.paused && !opv.ended && opv.currentTime < 1) {
       e.preventDefault(); opv.play(); return;                       // 오프닝: 첫 누름은 재생
     }
     if (next.includes(e.key)) { e.preventDefault(); go(cur + 1); }

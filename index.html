@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -41,12 +41,10 @@ window.SITE = {
 <!-- 0. 오프닝 영상 -->
 <section id="opening" class="sec opening" data-title="오프닝">
   <div class="op-frame">
-    <div class="op-soon" role="img" aria-label="오프닝 영상 준비 중">
-      <span class="op-sun"></span>
-      <p>전주교육대학교</p>
-      <b>초등교육과</b>
-      <small>오프닝 영상 준비 중</small>
-    </div>
+    <video id="opening-video" playsinline preload="none" poster="media/opening_poster.jpg" aria-label="초등교육과 오프닝 영상 44초">
+      <source src="media/opening.mp4" type="video/mp4">
+    </video>
+    <button class="op-play" type="button" aria-label="오프닝 영상 재생"><span></span></button>
   </div>
 </section>
 
@@ -207,10 +205,10 @@ window.SITE = {
 <section id="videos" class="sec" data-title="영상">
   <header class="sec-head">
     <h2><span class="badge">06</span> 선배들이 만든 초등과</h2>
-    <p>23·24학번이 직접 찍은 두 편. 초등과가 아닌 사람은 누구?</p>
+    <p>23·24학번이 직접 찍은 두 편, 하이라이트 96초. 초등과가 아닌 사람은 누구?</p>
   </header>
   <div class="vid-wrap">
-  <figure class="trailer" hidden>
+  <figure class="trailer">
     <div class="video-frame">
       <video id="trailer" controls playsinline preload="none" poster="media/trailer_poster.jpg">
         <source src="media/trailer.mp4" type="video/mp4">
@@ -352,6 +350,6 @@ window.SITE = {
   <button type="button" class="pmode" title="발표 모드 전환 (P)">발표 모드</button>
 </footer>
 
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>
