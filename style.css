@@ -270,6 +270,8 @@ address a { text-decoration-color: var(--accent); text-decoration-thickness: 2px
 .me li::marker { color: var(--sage-d); }
 .me a { color: var(--sage-ink); font-weight: 700; text-decoration: none; }
 .me a:hover, .me a:focus-visible { text-decoration: underline; }
+.me a.threads-btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: fit-content; min-height: 44px; margin: 8px 0 2px; padding: 8px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 4px 0 var(--shade); }
+.me a.threads-btn:hover, .me a.threads-btn:focus-visible { background: var(--dark); text-decoration: none; }
 
 /* ─── 태블릿 이상 ─── */
 @media (min-width: 720px) {
@@ -322,6 +324,7 @@ body.presenter .me { padding: 16px 20px 18px; }
 body.presenter .me-pic { aspect-ratio: 2.2 / 1; }
 body.presenter .me h3 { font-size: 1.35em; }
 body.presenter .me ul { font-size: .84em; }
+body.presenter .me a.threads-btn { min-height: 0; padding: 5px 14px; margin-top: 6px; }
 body.presenter .letter-grid { grid-template-columns: minmax(200px, 22%) 1fr; gap: 32px; }
 body.presenter .letter-card { padding: 28px 34px; }
 body.presenter .letter-card p { font-size: 1.22em; }
