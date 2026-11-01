@@ -38,6 +38,7 @@
     hudN.textContent = badge ? badge.textContent + ' / ' + String(nBadges).padStart(2, '0') : (secs[cur].dataset.title || '');
     body.classList.toggle('on-hero', secs[cur].id === 'hero');
     body.classList.toggle('on-opening', secs[cur].id === 'opening');
+    body.classList.toggle('on-ask', secs[cur].id === 'ask');
   }
   const io = new IntersectionObserver((ents) => {
     ents.forEach(e => { if (e.isIntersecting) { cur = secs.indexOf(e.target); syncHud(); } });
@@ -108,6 +109,7 @@
     else if (prev.includes(e.key)) { e.preventDefault(); go(cur - 1); }
     else if (e.key === 'Home') { e.preventDefault(); go(0); }
     else if (e.key === 'End') { e.preventDefault(); go(secs.length - 1); }
+    else if (e.key === 'q' || e.key === 'Q') { e.preventDefault(); go(secs.findIndex(s => s.id === 'ask')); }   // Q = 질문 화면
     else if (e.key === '0') { e.preventDefault(); go(secs.findIndex(s => s.id === 'hero')); }          // 0 = 시작
     else if (/^[1-9]$/.test(e.key) && badgeIdx[e.key] !== undefined) { e.preventDefault(); go(badgeIdx[e.key]); }   // 1~9 = 화면 배지 번호
   });

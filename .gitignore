@@ -3,3 +3,4 @@ __pycache__/
 .superpowers/
 tools/check.py
 tools/check_keys.py
+tools/check_qna.py

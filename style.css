@@ -375,3 +375,59 @@ body.presenter.on-opening .dots a.on { background: var(--sun); border-color: var
 body { word-break: keep-all; overflow-wrap: break-word; }
 h1, h2, h3, summary, figcaption, .sec-head p, .slogan, .bubble, .pull { text-wrap: balance; }
 p, li, dd { text-wrap: pretty; }
+
+/* ─── 10. 질문 받기 (LAMP Q&A, qna.js) ─── */
+.ask .sec-head h2 em { font-style: normal; color: var(--accent-big); }
+.qcount { display: inline-block; margin-left: 6px; font-family: var(--hand); color: var(--ink); }
+.qcount b { color: var(--accent-ink); font-family: var(--display); }
+.ask-grid { display: grid; gap: 16px; }
+.qcards { display: grid; gap: 10px; align-content: start; }
+.qcard { text-align: left; font: inherit; font-family: var(--hand); font-size: 1.05em; line-height: 1.5; color: var(--ink); background: #fff; border: var(--line); border-radius: var(--leaf); box-shadow: var(--shadow); padding: 12px 16px; cursor: pointer; word-break: keep-all; }
+.qcard .no { font-family: var(--display); font-weight: 900; color: var(--accent-ink); margin-right: .45em; }
+.qcard.done { opacity: .45; }
+.qempty { margin: 0; padding: 18px; border: 2px dashed var(--line-c); border-radius: var(--leaf); color: var(--muted); font-family: var(--hand); text-align: center; }
+.ask-side { display: grid; gap: 12px; align-content: start; }
+.qr-ask { display: none; margin: 0; background: #fff; border: var(--line); border-radius: var(--leaf); box-shadow: var(--shadow); padding: 14px; text-align: center; }
+.qr-ask img { width: 100%; max-width: 220px; margin: 0 auto; }
+.qr-ask figcaption { margin-top: 6px; font-family: var(--hand); font-size: 1.05em; color: var(--ink); }
+.qr-ask .url { font-size: .7em; color: var(--muted); }
+.qform { background: #fff; border: var(--line); border-radius: var(--leaf); box-shadow: var(--shadow); padding: 12px; }
+.qform textarea { width: 100%; box-sizing: border-box; border: 2px solid var(--line-c); border-radius: 12px; padding: 10px 12px; font: inherit; font-family: var(--hand); font-size: 1.05em; color: var(--ink); resize: vertical; background: var(--bg); }
+.qform textarea:focus { outline: 3px solid var(--sun); border-color: var(--sage); }
+.qrow { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 8px; }
+.qcnt { font-size: .85em; color: var(--muted); }
+.qform button { border: 0; border-radius: 999px; background: var(--sun); color: var(--ink); font-family: var(--display); font-weight: 900; font-size: 1em; padding: 10px 22px; cursor: pointer; }
+.qform button:disabled { opacity: .6; }
+.qerr { margin: 6px 0 0; color: #A33B1F; font-size: .9em; }
+.qfab { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 20; border: 0; border-radius: 999px; background: var(--ink); color: var(--sun); font-family: var(--display); font-weight: 900; font-size: 1rem; padding: 12px 18px; box-shadow: 0 8px 20px rgba(0,0,0,.25); cursor: pointer; transition: opacity .2s, transform .2s; }
+.qfab.away { opacity: 0; transform: translateY(20px); pointer-events: none; }
+body.presenter .qfab { display: none; }
+.qsheet { position: fixed; inset: 0; z-index: 40; background: rgba(31,51,34,.45); display: flex; align-items: flex-end; justify-content: center; }
+.qsheet-box { width: min(560px, 100%); background: #fff; border-radius: 22px 22px 0 0; padding: 18px 16px calc(18px + env(safe-area-inset-bottom)); box-shadow: 0 -10px 30px rgba(0,0,0,.2); }
+.qsheet .qform { border: 0; box-shadow: none; padding: 0; margin-top: 8px; }
+.qkick { margin: 0; font-weight: 700; color: var(--sage-ink); font-size: .92em; }
+.qclose { margin-top: 10px; width: 100%; border: var(--line); background: #fff; border-radius: 999px; padding: 8px; font-family: var(--hand); color: var(--ink); cursor: pointer; }
+.qtoast { position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%); z-index: 50; background: var(--ink); color: #FFF7E2; border-radius: 999px; padding: 10px 18px; font-family: var(--hand); box-shadow: 0 8px 20px rgba(0,0,0,.25); white-space: nowrap; }
+.qspot { position: fixed; inset: 0; z-index: 60; background: rgba(31,51,34,.6); display: grid; place-items: center; padding: 20px; }
+.qspot-box { width: min(1100px, 100%); background: #fff; border-radius: 28px 28px 28px 8px; padding: clamp(20px, 4vw, 56px); box-shadow: 0 20px 60px rgba(0,0,0,.3); word-break: keep-all; }
+.qspot-box .no { margin: 0; font-family: var(--display); font-weight: 900; color: var(--accent-ink); font-size: clamp(1.2rem, 2.4vw, 2.2rem); }
+.qspot-box .qt { margin: 10px 0 24px; font-family: var(--hand); color: var(--ink); font-size: clamp(1.5rem, 4vw, 3.6rem); line-height: 1.4; text-wrap: balance; }
+.qspot-box .acts { display: flex; flex-wrap: wrap; gap: 10px; }
+.qspot-box .acts button { border: var(--line); background: #fff; border-radius: 999px; padding: 8px 18px; font-family: var(--display); font-weight: 700; color: var(--ink); font-size: clamp(.95rem, 1.3vw, 1.2rem); cursor: pointer; }
+.qspot-box .acts .ok { background: var(--sage-ink); border-color: var(--sage-ink); color: #fff; }
+.hud-q { background: #fff; border: var(--line); border-radius: 999px; padding: 2px 12px; color: var(--ink); font-family: var(--display); font-weight: 700; font-size: .9em; }
+body.presenter.on-ask .hud-q { display: none; }
+@media (min-width: 720px) {
+  .qcards { grid-template-columns: repeat(2, 1fr); }
+  .ask-grid { grid-template-columns: 1fr 300px; align-items: start; }
+}
+body.presenter .ask-grid { grid-template-columns: 1fr minmax(220px, 17%); gap: 24px; }
+body.presenter .qcards { grid-template-columns: repeat(3, 1fr); max-height: calc(100svh - 300px); overflow: auto; padding: 2px 4px 8px 2px; }
+body.presenter .qcard { font-size: 1.15em; }
+body.presenter .qr-ask { display: block; }
+body.presenter #qform-inline { display: none; }
+@media (max-height: 820px) and (min-width: 1000px) {
+  body.presenter .qcards { grid-template-columns: repeat(2, 1fr); max-height: calc(100svh - 230px); }
+  body.presenter .qr-ask img { max-width: 150px; }
+}
+@media (max-width: 719px) { .ask-side { order: -1; } }

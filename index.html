@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -33,6 +33,7 @@ window.SITE = {
 <nav class="dots" aria-label="화면 이동"></nav>
 <div class="hud">
   <span class="hud-n" aria-hidden="true"></span>
+  <span class="hud-q" hidden></span>
   <a class="hud-qr" href="#hero" title="QR 다시 보기"><img src="img/qr.svg" alt=""></a>
 </div>
 
@@ -317,6 +318,21 @@ window.SITE = {
   </div>
 </section>
 
+<!-- 10. 질문 받기 (Q&A) -->
+<section id="ask" class="sec ask" data-title="질문">
+  <header class="sec-head">
+    <h2><span class="badge">10</span> 질문 있나요? <em>바로 답해요</em></h2>
+    <p>휴대폰으로 보낸 질문이 여기에 바로 올라옵니다. 이름은 남지 않아요. <span class="qcount">💬 받은 질문 <b id="qn">0</b>개</span></p>
+  </header>
+  <div class="ask-grid">
+    <div class="qcards" id="qcards" aria-live="polite"></div>
+    <aside class="ask-side">
+      <figure class="qr-ask"><img src="img/qr.svg" alt="QR 코드"><figcaption>질문은 휴대폰으로<br><span class="url">taehyeonglim.github.io/<wbr><span class="nb">jnue-elementary</span></span></figcaption></figure>
+      <div id="qform-inline"></div>
+    </aside>
+  </div>
+</section>
+
 <!-- 11. 마무리 -->
 <section id="end" class="sec end" data-title="끝">
   <div class="end-grid">
@@ -349,6 +365,7 @@ window.SITE = {
   <button type="button" class="pmode" title="발표 모드 전환 (P)">발표 모드</button>
 </footer>
 
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
+<script type="module" src="qna.js?v=1"></script>
 </body>
 </html>
